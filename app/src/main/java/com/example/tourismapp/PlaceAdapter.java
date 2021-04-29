@@ -50,6 +50,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceAdapter
             super(itemView);
             itemImageView = itemView.findViewById(R.id.itemImageView);
             titleTextView = itemView.findViewById(R.id.titleTextView);
+            itemTextView = itemView.findViewById(R.id.itemTextView);
             itemTextView2 = itemView.findViewById(R.id.itemTextView2);
             itemTextView3 = itemView.findViewById(R.id.itemTextView3);
         }

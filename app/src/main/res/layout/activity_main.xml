@@ -21,9 +21,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/placeRecyclerView"
-        android:layout_width="382dp"
-        android:layout_height="374dp"
+        android:layout_width="396dp"
+        android:layout_height="455dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,4 +32,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topRecyclerView"
         app:layout_constraintVertical_bias="0.0" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.tourismapp.page_first_Fragment"
+        android:layout_width="395dp"
+        android:layout_height="417dp"
+        app:layout_constraintBottom_toBottomOf="@+id/placeRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/placeRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/placeRecyclerView"
+        app:layout_constraintTop_toTopOf="@+id/placeRecyclerView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

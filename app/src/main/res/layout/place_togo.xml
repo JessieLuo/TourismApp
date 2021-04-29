@@ -7,54 +7,73 @@
 
     <ImageView
         android:id="@+id/itemImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="158dp"
+        android:layout_height="141dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="464dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/titleTextView"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:onClick="selectFragment"/>
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="139dp"
+        android:layout_width="181dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="14dp"
         android:text="Title"
         app:layout_constraintBottom_toTopOf="@+id/itemTextView"
-        app:layout_constraintEnd_toStartOf="@+id/itemTextView3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/itemTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="20dp"
         android:text="rent"
         app:layout_constraintBottom_toTopOf="@+id/itemTextView2"
-        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemImageView"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
     <TextView
         android:id="@+id/itemTextView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
         android:text="bedroom"
         app:layout_constraintBottom_toTopOf="@+id/itemTextView3"
-        app:layout_constraintEnd_toEndOf="@+id/itemTextView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemImageView"
         app:layout_constraintTop_toBottomOf="@+id/itemTextView" />
 
     <TextView
         android:id="@+id/itemTextView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="213dp"
-        android:layout_marginBottom="472dp"
+        android:layout_width="182dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="372dp"
         android:text="carpark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/titleTextView"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/itemImageView"
         app:layout_constraintTop_toBottomOf="@+id/itemTextView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,14 @@
 package com.example.tourismapp;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Integer[] imageList = {R.drawable.burwood, R.drawable.burwood, R.drawable.burwood};
 
     List<com.example.tourismapp.PlaceItem> placeItemList = new ArrayList<>();
-    Integer[] imageListForPlace = {R.drawable.burwood};
+    Integer[] imageListForPlace = {R.drawable.burwood, R.drawable.burwood, R.drawable.burwood};
     String[] titleList = {"Title1", "Title2", "Title3"};
     String[] rentList = {"580 PW", "470 PW", "520 PW"};
     String[] bedList = {"2 Bedroom", "1 Bedroom", "3 Bedroom"};
@@ -52,4 +55,17 @@ public class MainActivity extends AppCompatActivity {
             placeItemList.add(placeItem);
         }
     }
+
+    /*public void selectFragment(View view){
+        Fragment fragment;
+        switch (view.getId()){
+            case R.id.itemImageView:
+                fragment = new page_first_Fragment();
+            default:
+                throw new IllegalStateException("Unexpected value: " + view.getId());
+        }
+        FragmentManager fragmentManager;
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment, fragment).commit();
+    }*/
 }
