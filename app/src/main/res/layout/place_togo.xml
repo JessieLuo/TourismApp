@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/itemImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleTextView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="139dp"
+        android:text="Title"
+        app:layout_constraintBottom_toTopOf="@+id/itemTextView"
+        app:layout_constraintEnd_toStartOf="@+id/itemTextView3"
+        app:layout_constraintStart_toEndOf="@+id/itemImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="rent"
+        app:layout_constraintBottom_toTopOf="@+id/itemTextView2"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toEndOf="@+id/itemImageView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/itemTextView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="bedroom"
+        app:layout_constraintBottom_toTopOf="@+id/itemTextView3"
+        app:layout_constraintEnd_toEndOf="@+id/itemTextView"
+        app:layout_constraintStart_toEndOf="@+id/itemImageView"
+        app:layout_constraintTop_toBottomOf="@+id/itemTextView" />
+
+    <TextView
+        android:id="@+id/itemTextView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="213dp"
+        android:layout_marginBottom="472dp"
+        android:text="carpark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/itemTextView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
