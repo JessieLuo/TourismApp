@@ -56,16 +56,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void selectFragment(View view){
-        Fragment fragment;
+    public void selectFragment(View view){
+        Fragment fragmentSec;
         switch (view.getId()){
             case R.id.itemImageView:
-                fragment = new page_first_Fragment();
+                fragmentSec = new page_first_Fragment();
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
         }
-        FragmentManager fragmentManager;
+        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment, fragment).commit();
-    }*/
+        fragmentTransaction.replace(R.id.fragmentSec, fragmentSec).commit();
+    }
+
 }

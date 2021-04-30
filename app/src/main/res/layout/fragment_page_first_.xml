@@ -7,17 +7,18 @@
     tools:context=".page_first_Fragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/fragment_image"
         android:layout_width="match_parent"
         android:layout_height="256dp"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars"
+        android:src="@drawable/burwood"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/fragment_title_TextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="fill"
-        android:text="TextView"
-        android:textAlignment="center" />
+        android:gravity="center"
+        android:text="Title"
+        android:textSize="24sp" />
 
 </FrameLayout>
