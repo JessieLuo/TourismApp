@@ -2,6 +2,8 @@ package com.example.tourismapp;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     String[] bedList = {"2 Bedroom", "1 Bedroom", "3 Bedroom"};
     String[] carList = {"2 CarPark", "1 CarPark", "2 CarPark"};
 
+    ImageView itemImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,19 +57,22 @@ public class MainActivity extends AppCompatActivity {
                 , bedList[i], carList[i]);
             placeItemList.add(placeItem);
         }
+
+       /* Button fragmentButton = findViewById(R.id.fragmentButton);
+        fragmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new page_first_Fragment());
+            }
+        });*/
     }
 
-    public void selectFragment(View view){
-        Fragment fragmentSec;
-        switch (view.getId()){
-            case R.id.itemImageView:
-                fragmentSec = new page_first_Fragment();
-            default:
-                throw new IllegalStateException("Unexpected value: " + view.getId());
-        }
+    /*private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentSec, fragmentSec).commit();
-    }
+        fragmentTransaction.replace(R.id.fragment_tourism, fragment);
+        fragmentTransaction.commit();
+    }*/
+
 
 }

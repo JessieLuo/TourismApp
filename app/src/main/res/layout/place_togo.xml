@@ -17,8 +17,7 @@
         app:layout_constraintEnd_toStartOf="@+id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:onClick="selectFragment"/>
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/titleTextView"
@@ -69,11 +68,25 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="372dp"
+        android:layout_marginBottom="28dp"
         android:text="carpark"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toEndOf="@+id/itemImageView"
         app:layout_constraintTop_toBottomOf="@+id/itemTextView2" />
+
+    <Button
+        android:id="@+id/fragmentButton"
+        android:layout_width="116dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="295dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemImageView"
+        app:layout_constraintTop_toBottomOf="@+id/itemTextView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

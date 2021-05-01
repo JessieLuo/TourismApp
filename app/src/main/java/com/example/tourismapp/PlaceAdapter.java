@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,6 +37,19 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceAdapter
         holder.itemTextView.setText(placeItemList.get(position).getRent());
         holder.itemTextView2.setText(placeItemList.get(position).getBedroom());
         holder.itemTextView3.setText(placeItemList.get(position).getCar());
+        holder.fragmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new page_first_Fragment());
+            }
+        });
+    }
+
+    private void replaceFragment(page_first_Fragment page_first_fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_tourism, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -46,6 +60,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceAdapter
     public class PlaceAdapterViewHolder extends RecyclerView.ViewHolder {
         public ImageView itemImageView;
         public TextView titleTextView, itemTextView, itemTextView2, itemTextView3;
+        Button fragmentButton;
         public PlaceAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             itemImageView = itemView.findViewById(R.id.itemImageView);
@@ -53,6 +68,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceAdapter
             itemTextView = itemView.findViewById(R.id.itemTextView);
             itemTextView2 = itemView.findViewById(R.id.itemTextView2);
             itemTextView3 = itemView.findViewById(R.id.itemTextView3);
+            fragmentButton = itemView.findViewById(R.id.fragmentButton);
         }
     }
 }
